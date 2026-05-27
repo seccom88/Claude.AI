@@ -14,7 +14,7 @@ ALLOWED_USER = int(os.environ["ALLOWED_USER"])
 _claude_fallback = (
     os.path.expanduser("~\\AppData\\Local\\AnthropicClaude\\claude.exe")
     if sys.platform == "win32"
-    else os.path.expanduser("~/.claude/local/claude")
+    else os.path.expanduser("~/.local/bin/claude")
 )
 CLAUDE_BIN = shutil.which("claude") or _claude_fallback
 SESSIONS_DIR = os.path.expanduser("~/TelegramBot/sessions")
